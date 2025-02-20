@@ -1,5 +1,6 @@
+
 import React from 'react'
-import { About, Experience, Home, View01 } from './components'
+import { About, ContactMe, Experience, Home, View01 } from './components'
 import { Navbar } from './components/Navbar'
 
 
@@ -13,6 +14,7 @@ export const MyPortfolio = () => {
         <Home/>
         <About />
         <Experience />
+        <ContactMe />
     </>
   )
 }

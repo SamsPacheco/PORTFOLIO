@@ -10,7 +10,7 @@ export const Home = () => {
             <div className='flex-1 space-y-5'>
                 <span className='text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text'> <img src="public/sparkles.png" alt="" className='w-[25px] inline-block px-1' />Ready to innovate</span>
                 <h2 className='text-6xl font-bold text-white'>FrontEnd <span className='block text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text'>Developer</span></h2>
-                <p className='text-white'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam cupiditate id optio tenetur modi quae.</p>
+                <p className='text-white'>Creating innovative websites with elegant desing, optimized code and a focus on user experience for quality digital products.</p>
                 <div className='flex gap-3 mt-4'>
                     <span className='p-2 border border-gray-400 text-white/60 rounded-lg bg-gray-400/30'>React</span>
                     <span className='p-2 border border-gray-400 text-white/60 rounded-lg bg-gray-400/30'>JavaScript</span>

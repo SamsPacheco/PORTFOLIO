@@ -66,6 +66,11 @@ export const Experience = () => {
         </article>
 
         <article className='circle-icon space-y-1'> 
+          <img className=" img-icon "src="public/icon-technologies/git.svg" alt="api-icon"/>
+          <p>Git</p> 
+        </article>
+
+        <article className='circle-icon space-y-1'> 
           <img className=" img-icon "src="public/icon-technologies/redux.svg" alt="redux-icon"/>
           <p>Redux</p> 
         </article>
