@@ -2,37 +2,43 @@ import React from 'react'
 
 export const Home = () => {
   return (
-    <main className='w-[80%] mx-auto flex flex-col justify-center h-[85dvh]'>
+    <main className='w-[85%] mx-auto flex flex-col md:justify-center h-[90dvh]'>
 
-        <section className='flex justify-between items-center py-10'>
+        <section className='flex justify-between items-center'>
 
             {/* text */}
-            <div className='flex-1 space-y-5'>
-                <span className='text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text'> <img src="public/sparkles.png" alt="" className='w-[25px] inline-block px-1' />Ready to innovate</span>
-                <h2 className='text-6xl font-bold text-white'>FrontEnd <span className='block text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text'>Developer</span></h2>
-                <p className='text-white'>Creating innovative websites with elegant desing, optimized code and a focus on user experience for quality digital products.</p>
-                <div className='flex gap-3 mt-4'>
-                    <span className='p-2 border border-gray-400 text-white/60 rounded-lg bg-gray-400/30'>React</span>
-                    <span className='p-2 border border-gray-400 text-white/60 rounded-lg bg-gray-400/30'>JavaScript</span>
-                    <span className='p-2 border border-gray-400 text-white/60 rounded-lg bg-gray-400/30'>Node Js</span>
-                    <span className='p-2 border border-gray-400 text-white/60 rounded-lg bg-gray-400/30'>Tailwind</span>
+            <div className='flex-1 space-y-5 py-10'>
+
+                <div>
+                    <p className='text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-center lg:text-start'> <img src="public/sparkles.png" alt="" className='w-[25px] inline-block px-1' />Ready to innovate</p>
+                    
+                    <h2 className='text-5xl md:text-6xl font-bold text-white text-center lg:text-start'>FrontEnd <span className='block text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text'>Developer</span>
+                    </h2>
+                </div>
+
+                <p className='text-white text-balance text-center lg:text-start'>Creating innovative websites with elegant desing, optimized code and a focus on user experience for quality digital products.</p>
+                <div className='flex flex-wrap justify-center lg:justify-start gap-3 mt-4'>
+                    <span className='px-2 md:p-1 md:rounded-lg border border-gray-400 text-white/60 rounded-[3px] bg-gray-400/30'>React</span>
+                    <span className='px-2 md:p-1 md:rounded-lg border border-gray-400 text-white/60 rounded-[3px] bg-gray-400/30'>JavaScriptt</span>
+                    <span className='px-2 md:p-1 md:rounded-lg border border-gray-400 text-white/60 rounded-[3px] bg-gray-400/30'>Node Js</span>
+                    <span className='px-2 md:p-1 md:rounded-lg border border-gray-400 text-white/60 rounded-[3px] bg-gray-400/30'>TailwindCss</span>
                 </div>
 
                 {/* buttons */}
-                <div className='py-2 flex gap-4'>
-                    <button className='text-white w-40 py-2 bg-black rounded-md flex justify-center items-center gap-3'>
+                <div className='py-2 md:flex space-y-2 md:space-y-0 md:gap-4 md:justify-center lg:justify-start'>
+                    <button className='text-white w-full md:w-40 py-3 bg-black rounded-md flex justify-center items-center gap-3 shadow-btns cursor-pointer'>
                         projects
                         <img src="public/arrow-up-right-from-square.png" alt="" className='w-[17px] inline-block' />
                     </button>
 
-                    <button className='text-white w-40 py-2 bg-black rounded-md flex justify-center items-center gap-3'>
+                    <button className='text-white w-full md:w-40 py-3 bg-black rounded-md flex justify-center items-center gap-3 shadow-btns cursor-pointer'>
                         Contact
                         <img src="public/envelope.png" alt="" className='w-[17px] inline-block'/>
                     </button>
                 </div>
 
                 {/* networks */}
-                <div className='flex gap-4'>
+                <div className='flex gap-4 justify-center lg:justify-start'>
                     <div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'>
                         <img src="public/Github_dark.svg" alt="" className='w-5'/>
                     </div>
@@ -40,18 +46,17 @@ export const Home = () => {
                     <div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'>
                         <img src="public/linkedin.png" alt="" className='w-5'/>
                     </div>
+
+                    <div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'>
+                        <img src="public/envelope.png" alt="" className='w-5'/>
+                    </div>
                 </div>
 
-
-            
-            
-            
             </div>
 
             {/* img */}
-            <div className='max-w-[650px]'>
+            <div className='max-w-[650px] hidden lg:block mb-20'>
                 <video src="public/Portfolio_Animation.webm" autoPlay muted loopc disablePictureInPicture ></video>
-                {/* <video src="public/vecteezy_isometric-computer-technology-animation-desktop-computer_48039160.webm" autoPlay muted loopc className='w-[1100px]'></video> */}
             </div>
 
         </section>

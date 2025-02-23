@@ -2,43 +2,45 @@ import React from 'react'
 
 export const About = () => {
   return (
-    <main className='w-[80%] mx-auto flex flex-col justify-center my-3'>
+    // revisar la separacion entre componentes en dispositivos muy peques 
+    <main className='w-[85%] mx-auto flex flex-col justify-center md:py-5'>
 
-        <h1 className='text-3xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center'>About
+        <h1 className='text-3xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center '>About
         </h1>
 
-        <p className='text-[#e1cef7] py-1 flex gap-3 items-center justify-center'> 
+        <p className='text-[#e1cef7] py-1 flex gap-3 items-center justify-center text-balance text-center'> 
             <img src="public/sparkles-pink.png" alt="" className='w-4 h-4'/>
             Transforming ideas into digital experiences
             <img src="public/sparkles-pink.png" alt="" className='w-4 h-4'/>    
         </p>
 
-        {/* description */}
-        <section className='flex items-center justify-between '>
 
-            <div className='flex-1 space-y-5'>
-                <h1 className='text-5xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent '>Hello, I'm
-                    <h3 className='text-white text-[44px]'>Sam Pacheco</h3>
+        {/* description */}
+        <section className='flex items-center justify-between'>
+
+            <div className='flex-1 space-y-5 mt-4'>
+                <h1 className='text-5xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent text-center lg:text-start lg: '>Hello, I'm
+                    <h3 className='text-white text-[38px] py-2 lg:py-0 md:text-[44px] '>Sam Pacheco</h3>
                 </h1>
-                <p className='text-white text-lg max-w-[625px]'>I am a Front End developer excited to apply my knowledge in the real world. I am looking for an opportunity where I can grow professionally, learn from experienced developers and contribute to meaningful projects.</p>
+                <p className='text-white text-lg max-w-[625px] md:mx-auto text-balance text-center lg:text-start border border-white'>I am a Front End developer excited to apply my knowledge in the real world. I am looking for an opportunity where I can grow professionally, learn from experienced developers and contribute to meaningful projects.</p>
                 
                 {/* btns  */}
-                <div className='text-white font-semibold flex gap-5 mt-4'>
-                    <button className='w-[200px] bg-linear-to-bl from-violet-500 to-fuchsia-500 py-2 rounded-md flex items-center justify-center gap-3 cursor-pointer'> <img src="public/cv.png" alt="" className='w-5' />Download CV</button>
-                    <button className='w-[200px] py-2 rounded-md border border-violet-500 text-violet-300 flex items-center justify-center gap-3 cursor-pointer'><img src="public/code-simple.png" alt="code-simple" className='w-5'/>View Projects</button>
+                <div className='text-white font-semibold md:flex gap-5 mt-4 space-y-2 md:space-y-0 justify-center lg:justify-start'>
+                    <button className='w-full md:w-[200px] bg-linear-to-bl from-violet-500 to-fuchsia-500 py-2 rounded-[5px] md:rounded-md flex items-center justify-center gap-3 cursor-pointer'> <img src="public/cv.png" alt="" className='w-5' />Download CV</button>
+                    <button className='w-full md:w-[200px] py-2 rounded-[5px] md:rounded-md border border-violet-500 text-violet-300 flex items-center justify-center gap-3 cursor-pointer'><img src="public/code-simple.png" alt="code-simple" className='w-5'/>View Projects</button>
                 </div>
             </div>
 
             {/* photo */}
-            <div className='xs:hidden lg:block max-w-[430px] flex-1 bg-[url(public/magicpattern-blob-1739553109424.svg)] bg-cover bg-center'>
+            <div className='hidden lg:block max-w-[430px] flex-1 bg-[url(public/magicpattern-blob-1739553109424.svg)] bg-cover bg-center'>
                 <img src="public/Me.svg" alt="photo-me"/>
             </div>
         
         </section>
 
         {/* projects / certifications / experiences */}
-        <section className='flex gap-5'>
-            <article className='flex-1 h-[180px] py-5 bg-[#1e324e] rounded-lg space-y-4'>
+        <section className='md:flex gap-5 my-8 space-y-3'>
+            <article className='flex-1 h-max py-5 bg-[#1e324e] rounded-lg space-y-4'>
                 <div className='flex justify-between px-5'>
                     <div className='w-10 h-10 rounded-full bg-[#5674a0]'>
                         <img src="public/tag.png" alt="" className='p-2' />
@@ -69,7 +71,7 @@ export const About = () => {
                 </div>
             </article> */}
 
-            <article className='flex-1 h-[180px] py-5 bg-[#1e324e] rounded-lg space-y-4 relative'>
+            <article className='flex-1 h-max py-5 bg-[#1e324e] rounded-lg space-y-4'>
                 <div className='flex justify-between px-5'>
                     <div className='w-10 h-10 rounded-full bg-[#5674a0]'>
                         <img src="public/globe.png" alt="" className='p-2' />
