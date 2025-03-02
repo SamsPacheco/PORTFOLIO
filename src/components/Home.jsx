@@ -4,12 +4,12 @@ import { motion } from "framer-motion"
 
 export const Home = () => {
   return (
-    <main className='w-[85%] mx-auto flex flex-col md:justify-center h-[75dvh]'>
+    <main className='w-[85%] mx-auto flex flex-col justify-center h-[88dvh] border border-white'>
 
         <section className='flex justify-between items-center'>
 
             {/* text */}
-            <div className='flex-1 space-y-8 py-10'>
+            <div className='flex-1 space-y-8 py-5 md:py-10'>
 
                 <div>
                     <motion.p className='text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-center lg:text-start' 
@@ -20,7 +20,7 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}
-                    > <img src="public/sparkles.png" alt="" className='w-[25px] inline-block px-1' />Ready to innovate</motion.p>
+                    > <img src="/sparkles.png" alt="" className='w-[25px] inline-block px-1' />Ready to innovate</motion.p>
                     
                     <motion.h2 className='text-5xl md:text-6xl font-bold text-white text-center lg:text-start'
                     initial={{ opacity: [0, 0.4, 0.6, 1], y: 150 }} // Empieza abajo y oculto
@@ -101,7 +101,7 @@ export const Home = () => {
                         delay: 1 * 0.8,
                     }}>
                         projects
-                        <img src="public/arrow-up-right-from-square.png" alt="" className='w-[17px] inline-block' />
+                        <img src="/arrow-up-right-from-square.png" alt="" className='w-[17px] inline-block' />
                     </motion.button>
 
                     <motion.button className='text-white w-full md:w-40 py-3 bg-black rounded-md flex justify-center items-center gap-3 shadow-btns cursor-pointer'
@@ -113,7 +113,7 @@ export const Home = () => {
                         delay: 1 * 0.8,
                     }}>
                         Contact
-                        <img src="public/envelope.png" alt="" className='w-[17px] inline-block'/>
+                        <img src="/envelope.png" alt="" className='w-[17px] inline-block'/>
                     </motion.button>
                 </div>
 
@@ -127,7 +127,7 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}>
-                        <img src="public/Github_dark.svg" alt="" className='w-8'/>
+                        <img src="/Github_dark.svg" alt="" className='w-8'/>
                     </motion.div>
 
                     <motion.div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
@@ -138,7 +138,7 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}>
-                        <img src="public/linkedin.png" alt="" className='w-8'/>
+                        <img src="/linkedin.png" alt="" className='w-8'/>
                     </motion.div>
 
                     <motion.div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
@@ -149,7 +149,7 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}>
-                        <img src="public/envelope.png" alt="" className='w-8'/>
+                        <img src="/envelope.png" alt="" className='w-8'/>
                     </motion.div>
                 </div>
 
@@ -164,7 +164,7 @@ export const Home = () => {
                 ease: "easeOut",
                 delay: 1 * 0.8,
             }}>
-                <video src="public/Portfolio_Animation.webm" autoPlay muted loopc disablePictureInPicture ></video>
+                <video src="/Portfolio_Animation.webm" autoPlay muted loopc disablePictureInPicture ></video>
             </motion.div>
 
         </section>

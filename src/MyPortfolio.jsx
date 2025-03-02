@@ -28,21 +28,33 @@ export const MyPortfolio = () => {
             <header className='sticky top-0 my-nav'> <Navbar /> </header>
 
             <main className='space-y-3'>
+
               <section>
                 <Home />  
               </section>
+
               <motion.section
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: false, amount: 0.2 }}>
+              //  initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+              //  transition={{ duration: 0.5 }}
+               viewport={{ once: true, amount: .2, rootMain: "50px 0px" }}
+               className='py-5'
+               >
                 <About />
               </motion.section>
-              <Experience />
-              <ContactMe />
+
+              {/* <motion.section
+              // initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1}}
+              // transition={{ duration: 0.8 }}
+              viewport={{ once: true, amount: 0.4, rootMain: "-150px 0px" }}>
+                <Experience />
+              </motion.section> */}
+
+              {/* <ContactMe />
               <footer className='h-8 my-3'>
                 <p className='text-white text-lg text-center font-light'>@2025 SAMUEL PACHECO</p>
-              </footer>
+              </footer> */}
             </main>
           </motion.div>
         )

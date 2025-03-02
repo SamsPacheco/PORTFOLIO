@@ -18,7 +18,7 @@ export const View01 = () => {
                         }}
                         transition={{ duration: 1, repeatType: "reverse", ease: "easeInOut" }}
                         >
-                        <img src="public/code-window.png" alt=""/>
+                        <img src="/code-window.png" alt=""/>
                     </motion.div>
 
                     <motion.div 
@@ -29,7 +29,7 @@ export const View01 = () => {
                         }}
                         transition={{ duration: 1, repeatType: "reverse", ease: "easeInOut", delay: 0.3 }}
                         >
-                        <img src="public/user.png" alt=""/>
+                        <img src="/user.png" alt=""/>
                     </motion.div>
 
                     <motion.div 
@@ -40,7 +40,7 @@ export const View01 = () => {
                         }}
                         transition={{ duration: 1, repeatType: "reverse", ease: "easeInOut", delay: 0.7 }}
                         >
-                        <img src="public/Github_dark.svg" alt=""/>
+                        <img src="/Github_dark.svg" alt=""/>
                     </motion.div>
                     
                 </div>
