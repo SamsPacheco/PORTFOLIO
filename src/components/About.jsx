@@ -4,10 +4,10 @@ import { motion, useInView } from "framer-motion"
 
 export const About = () => {
     const ref = useRef();
-    const isInView = useInView( ref, { once: false, amount: .2 });
+    const isInView = useInView( ref, { once: true, amount: .2 });
 
   return (
-    <main className='w-[85%] mx-auto flex flex-col justify-center border border-white my-5'>
+    <main className='w-[85%] mx-auto flex flex-col justify-center my-5'>
 
         <motion.h1 className='text-3xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center '
         ref={ref}

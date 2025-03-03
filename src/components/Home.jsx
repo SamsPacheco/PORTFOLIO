@@ -4,12 +4,12 @@ import { motion } from "framer-motion"
 
 export const Home = () => {
   return (
-    <main className='w-[85%] mx-auto flex flex-col justify-center h-[88dvh] border border-white'>
+    <main className='w-[85%] mx-auto flex flex-col justify-center h-[88dvh]'>
 
         <section className='flex justify-between items-center'>
 
             {/* text */}
-            <div className='flex-1 space-y-8 py-5 md:py-10'>
+            <div className='flex-1 space-y-8 py-5'>
 
                 <div>
                     <motion.p className='text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-center lg:text-start' 
@@ -42,7 +42,7 @@ export const Home = () => {
                     </motion.h2>
                 </div>
 
-                <motion.p className='text-white text-balance text-center lg:text-start'
+                <motion.p className='text-white text-pretty md:text text-center lg:text-start  text-xl'
                 initial={{ opacity: [0, 0.4, 0.6, 1], y: 150 }} // Empieza abajo y oculto
                 animate={{ opacity: 1, y: 0 }} // Se posiciona en su lugar
                 transition={{
@@ -127,7 +127,7 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}>
-                        <img src="/Github_dark.svg" alt="" className='w-8'/>
+                        <img src="/Github_dark.svg" alt="" className='w-8 p-[5px]'/>
                     </motion.div>
 
                     <motion.div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
@@ -138,7 +138,7 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}>
-                        <img src="/linkedin.png" alt="" className='w-8'/>
+                        <img src="/linkedin.png" alt="" className='w-8 p-[6px]'/>
                     </motion.div>
 
                     <motion.div className='w-9 h-9 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
@@ -149,14 +149,14 @@ export const Home = () => {
                         ease: "easeOut",
                         delay: 1 * 0.8,
                     }}>
-                        <img src="/envelope.png" alt="" className='w-8'/>
+                        <img src="/envelope.png" alt="" className='w-8 p-[5px]'/>
                     </motion.div>
                 </div>
 
             </div>
 
-            {/* img */}
-            <motion.div className='max-w-[650px] hidden lg:block mb-20'
+            {/* video */}
+            <motion.div className='max-w-[750px] hidden lg:block mb-20'
             initial={{ opacity: [0, 0.4, 0.6, 1], y: -150 }} // Empieza abajo y oculto
             animate={{ opacity: 1, y: 0 }} // Se posiciona en su lugar
             transition={{
@@ -164,7 +164,7 @@ export const Home = () => {
                 ease: "easeOut",
                 delay: 1 * 0.8,
             }}>
-                <video src="/Portfolio_Animation.webm" autoPlay muted loopc disablePictureInPicture ></video>
+                <video src="/Portfolio_Animation.webm" autoPlay muted loop disablePictureInPicture ></video>
             </motion.div>
 
         </section>
