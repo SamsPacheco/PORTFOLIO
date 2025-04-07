@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Navbar = () => {
   return (
-    <nav className='h-max flex justify-between items-center w-[85%] mx-auto py-1'>
+    <nav className='h-max flex justify-between items-center w-[80%] mx-auto '>
       {/* queda pendiente el buscar como retornar a secciones especificas con el navbar */}
         <div className='w-1/3 max-w-[105px]'>
             <img src="/logo.svg" alt="" />
@@ -24,3 +24,6 @@ export const Navbar = () => {
     </nav>
   )
 }
+
+
+// se debera de cambiar el navbar y aplicarle funcionalidad
