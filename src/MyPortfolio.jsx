@@ -1,99 +1,60 @@
 
-import React, { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, useInView } from "framer-motion"
+import React, { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from "framer-motion"
 import { About, ContactMe, Experience, Home, View01 } from './components'
 import { Navbar } from './components/Navbar'
 
 
 export const MyPortfolio = () => {
 
-  // creamos referencias para cada seccion 
-  const homeRef = useRef(null);
-  const aboutRef = useRef(false);
-  const experienceRef = useRef(null);
-  const contactRef = useRef(null);
-
-  // utilizamos useInView para detectar la visibilidad 
-  const isHomeVisible = useInView(homeRef, {once:true});
-  const isAboutVisible = useInView(aboutRef, {once:false});
-  const isExperienceVisible = useInView(experienceRef, {once:false});
-  const isContactVisible = useInView(contactRef, {once:true});
-
-
   const [showView01, setShowView01] = useState(true);
- 
 
   useEffect(() => {
-
-    setTimeout(() => {
-      setShowView01(false);
-    }, 2500); // Desaparece después de 2s
-    //return () => clearTimeout(timer);
-
+    setTimeout(() => setShowView01(false), 2500); // Desaparece después de 2s
   }, []);
-
-
 
   return (
     <>
-
-    
-
+      
       <AnimatePresence>
-        { showView01 && <View01/>}
-      </AnimatePresence>
+          {showView01 && <View01/>}
+      </AnimatePresence> 
+      
       {
+        !showView01 && (
+          <motion.div initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}>
+            <header className='sticky top-0 my-nav h-20 flex justify-center items-center'> <Navbar /> </header>
 
-          <AnimatePresence>
-            <div>
-              <header className='sticky top-0 my-nav'> <Navbar /> </header>
+            <main className='space-y-3 w-[90%] mx-auto'>
 
-              <main className='space-y-3'>
+              <section>
+                <Home />  
+              </section>
 
-                <motion.section
-                  ref={homeRef}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isHomeVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration:.5 }}>
-                  <Home />  
-                </motion.section>
+              <motion.section
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true, amount: .2, rootMain: "50px 0px" }}
+               className='py-5'
+               >
+                <About />
+              </motion.section>
 
-                <motion.section
-                  ref={aboutRef}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isAboutVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <About isVisible={isAboutVisible} />
-                </motion.section>
+               <motion.section
+              whileInView={{ opacity: 1}}
+              viewport={{ once: true, amount: 0.4, rootMain: "-150px 0px" }}>
+                <Experience />
+              </motion.section>
 
-                <motion.section
-                  ref={experienceRef}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isExperienceVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration:.5 }}
-                >
-                  <Experience isVisible={isExperienceVisible}/>
-                </motion.section>
-
-                <motion.section
-                  ref={contactRef}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isContactVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration:.5 }}
-                >
-                  <ContactMe />
-                </motion.section>
-
-                <footer className='h-8 mt-3 bg-[#114da168]'>
-                  <p className='text-white text-lg text-center font-light'>@2025 SAMUEL PACHECO</p>
-                </footer> 
-
-              </main>
-            </div>
-            </AnimatePresence>
-          
-      } 
+            {/*  <ContactMe /> */}
+              <footer className='h-8 my-3'>
+                <p className='text-white text-lg text-center font-light'>@2025 SAMUEL PACHECO</p>
+              </footer> 
+            </main> 
+          </motion.div>
+        )
+      }
       
     </>
       
