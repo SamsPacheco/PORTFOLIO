@@ -79,8 +79,12 @@ body{
     
 }
 
+
 @theme {
     --breakpoint-md: 49rem;
+
+
+/* background animated */
 
     --animate-float: imgFloat 7s ease-in-out infinite;
 
