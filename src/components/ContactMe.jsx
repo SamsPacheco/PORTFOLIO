@@ -15,7 +15,7 @@ export const ContactMe = () => {
 
             <form className='px-10 bg-transparent space-y-3 mx-auto'>
 
-              <div className='flex justify-center items-center border border-[#acacac] py-1 rounded-md gap-1 px-1'>
+              {/* <div className='flex justify-center items-center border border-[#acacac] py-1 rounded-md gap-1 px-1'>
                 <img src="/user.png" alt="user-icon" className='w-[30px] h-[30px] p-[6px]' />
                 <input type="text" placeholder='Your Name' className='w-full text-white placeholder:px-2 focus:outline-none not-placeholder-shown:bg-transparent group-[input:-webkit-autofill]:bg-transparent' />
               </div>
@@ -34,7 +34,7 @@ export const ContactMe = () => {
                 <button className='md:py-3 w-full mx-auto md:w-[200px] bg-linear-to-bl from-violet-500 to-fuchsia-500 py-2 rounded-md flex items-center justify-center gap-3 cursor-pointer text-white font-semibold my-5'>
                   <img src="/paper-plane.png" alt="paper-plane-icon" className='w-5' />
                   Send Message
-                </button>
+                </button> */}
 
 
 
