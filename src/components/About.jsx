@@ -10,7 +10,7 @@ export const About = () => {
             >About
             </h1>
 
-            <p className='text-[#e1cef7] py-1 flex items-start justify-center text-center md:gap-3'>
+            <p className='text-[#e1cef7] py-1 flex items-start justify-center text-center text-lg md:text-[20px] md:gap-3'>
                 <i className="uil uil-lightbulb-alt text-xl ml-3"></i>
                 Transforming ideas into digital experiences
                 <i className="uil uil-lightbulb-alt text-xl mr-3"></i>
@@ -18,14 +18,14 @@ export const About = () => {
 
 
             {/* description */}
-            <section className='flex items-center justify-between md:mt-3'>
+            <section className='flex items-center lg:justify-between md:mt-3'>
 
-                <div className='space-y-5 mt-4  md:w-[50%] '>
+                <div className='space-y-5 mt-4  lg:w-[50%] '>
                     <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent text-center lg:text-start'
                     >Hello, I'm
                         <span className='block text-white text-[50px] py-2 lg:py-0 md:text-[75px] '>Sam Pacheco.</span>
                     </h1>
-                    <p className='text-white text-lg text-[20px] text-balance md:text-wrap text-center lg:text-start mx-auto lg:mx-0 '
+                    <p className='text-white text-lg md:text-[20px] text-balance md:text-wrap text-center lg:text-start mx-auto lg:mx-0 '
                     >I am a Front End developer excited to apply my knowledge in the real world. I am looking for an opportunity where I can grow professionally, learn from experienced developers and contribute to meaningful projects.</p>
 
                     {/* btns  */}
@@ -44,7 +44,7 @@ export const About = () => {
                 </div>
 
                 {/* photo */}
-                <div className='w-[370px] md:w-[500px] md:h-[500px] egg-effect lg:block md:mr-[150px]'
+                <div className='hidden w-[370px] md:w-[500px] md:h-[500px] lg:block egg-effect md:mr-[20px] '
                 >
                     <img src="/Me.svg" alt="photo-me"/>
                 </div>
@@ -67,7 +67,7 @@ export const About = () => {
                     <div className='px-5 flex items-end'>
                         <div>
                             <h3 className='text-xl text-white font-semibold pb-1 md:text-2xl'> Total Projects </h3>
-                            <p className='text-white tracking-tight md:text-lg'>Always learning and creating. I transform ideas into functional digital experiences.</p>
+                            <p className='text-white tracking-tight text-lg md:text-[20px]'>Always learning and creating. I transform ideas into functional digital experiences.</p>
                         </div>
 
                     </div>
@@ -88,7 +88,7 @@ export const About = () => {
                         <div
                         >
                             <h3 className='text-xl text-white font-semibold pb-1 md:text-2xl'> Experience </h3>
-                            <p className='text-white tracking-tight md:text-lg'>I continue to explore and hone my ability to create impactful digital experiences.</p>
+                            <p className='text-white tracking-tight text-lg md:text-[20px]'>I continue to explore and hone my ability to create impactful digital experiences.</p>
                         </div>
 
                     </div>

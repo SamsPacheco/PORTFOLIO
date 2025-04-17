@@ -10,7 +10,7 @@ export const Navbar = () => {
     <nav className='text-white fixed flex justify-between items-center h-20 transition-[.3s] w-[90%] mx-auto z-10 '>
 
         <figure className='w-1/3 max-w-[105px] relative'>
-          <img src="public/logo.svg" alt="logo" className='w-full'/>
+          <img src="/logo.svg" alt="logo" className='w-full'/>
         </figure>
 
         <div id='navMenu' className={`fixed top-[80px] left-0 flex justify-center items-center w-full min-h-[450px] h-[90dvh] transition-all duration-300 ease-in-out md:translate-x-0 md:h-10 md:min-h-0 ${isOpen ? 'translate-x-0 flex~' : 'translate-x-[100%] hidden'} bg-[#04152d] md:flex md:bg-transparent md:top-5`}>

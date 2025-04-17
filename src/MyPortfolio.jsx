@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from "framer-motion"
 import { About, ContactMe, Experience, Home, View01 } from './components'
 import { Navbar } from './components/Navbar'
+import { MyFooter } from './components/MyFooter'
 
 
 export const MyPortfolio = () => {
@@ -41,16 +42,25 @@ export const MyPortfolio = () => {
                 <About />
               </motion.section>
 
-               <motion.section
+              <motion.section
               whileInView={{ opacity: 1}}
               viewport={{ once: true, amount: 0.4, rootMain: "-150px 0px" }}>
                 <Experience />
               </motion.section>
 
-            {/*  <ContactMe /> */}
-              <footer className='h-8 my-3'>
-                <p className='text-white text-lg text-center font-light'>@2025 SAMUEL PACHECO</p>
-              </footer> 
+              <motion.section
+              whileInView={{ opacity: 1}}
+              viewport={{ once: true, amount: 0.4, rootMain: "-150px 0px" }}>
+                <ContactMe />
+              </motion.section>
+
+              <motion.section
+              whileInView={{ opacity: 1}}
+              viewport={{ once: true, amount: 0.4, rootMain: "-150px 0px" }}>
+                <MyFooter />
+              </motion.section>
+
+            
             </main> 
           </motion.div>
         )

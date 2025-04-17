@@ -6,28 +6,28 @@ export const Experience = () => {
 
   return (
 
-    <main className='h-max flex flex-col justify-center py-5 mt-16 md:mt-32'>
+    <main className='h-max flex flex-col justify-center py-5 mt-16 md:my-32'>
 
       <h1 className='text-3xl md:text-[42px] font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center'
       >
         Portfolio Showcase
         <i className="uil uil-graduation-cap px-3"></i>
       </h1>
-      <p className='text-[#e1cef7] text-center max-w-[90%] mx-auto py-1 mb-5 mt-2 md:mt-0 text-[20px]'>Explore my journey through projects and technical expertise. Each section represents a milestone in my continuous learning path</p>
+      <p className='text-[#e1cef7] text-center max-w-[90%] mx-auto py-1 mb-5 mt-2 md:mt-0 text-lg md:text-[20px]'>Explore my journey through projects and technical expertise. Each section represents a milestone in my continuous learning path</p>
 
-      <section className='space-y-8 my-4'>
+      <section className='space-y-8 my-6'>
 
         {/* bnts */}
         <div className='md:flex gap-5 h-max space-y-3 md:space-y-0'>
           <button
-            className={`w-full text-white flex flex-col items-center justify-center flex-1 py-2 ${showcase ? 'rounded-md border-[1px] border-[#061a37] bg-[#3f4f70]' : 'bg-[#061a37] hover:bg-[#3f4f70]'}`}
+            className={`w-full text-white flex flex-col items-center font-semibold justify-center flex-1 py-2 ${showcase ? 'rounded-md border-[1px] border-[#061a37] bg-[#3f4f70]' : 'bg-[#061a37] hover:bg-[#3f4f70]'}`}
             onClick={() => setshowcase(!showcase)}
           >
             <img src="/tag.png" alt="icon-tag" className='w-5 py-1' />
             PROJECTS
           </button>
           <button
-            className={`w-full text-white flex flex-col items-center justify-center flex-1 py-2 ${!showcase ? 'rounded-md border-[1px] border-[#061a37] bg-[#3f4f70]' : 'bg-[#061a37] hover:bg-[#3f4f70]'}`}
+            className={`w-full text-white flex flex-col items-center font-semibold justify-center flex-1 py-2 ${!showcase ? 'rounded-md border-[1px] border-[#061a37] bg-[#3f4f70]' : 'bg-[#061a37] hover:bg-[#3f4f70]'}`}
             onClick={() => setshowcase(!showcase)}
           >
             <img src="/cubes-stacked.png" alt="stack-icon" className='w-5 py-1' />

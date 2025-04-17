@@ -22,7 +22,7 @@ export const Home = () => {
                         </h2>
                     </div>
 
-                    <p className='text-white text-balance lg:text-wrap text-center lg:text-start md:text-lg '
+                    <p className='text-white md:text-balance lg:text-wrap text-center lg:text-start text-lg md:text-[20px]'
 
                     >Creating innovative websites with elegant desing, optimized code and a focus on user experience for quality digital products.</p>
                     <div className='flex flex-wrap justify-center lg:justify-start gap-2 mt-4'>
@@ -77,7 +77,7 @@ export const Home = () => {
 
                 {/* img */}
                 <div className='hidden lg:block mb-20 w-[1000px] '>
-                    <video src="/Portfolio_Animation.webm" autoPlay muted loopc disablePictureInPicture className='w-full' ></video>
+                    <video src="/Portfolio_Animation.webm" autoPlay muted loop disablePictureInPicture className='w-full' ></video>
                 </div>
 
             </section>

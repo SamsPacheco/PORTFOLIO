@@ -71,7 +71,7 @@ export const View01 = () => {
                     {["Portfolio ", "Website "].map((word, index) => (
                         <motion.span
                             key={index}
-                            className="text-3xl md:text-4xl text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text font-bold "
+                            className="text-3xl md:text-5xl text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text font-bold "
                             initial={{ opacity: 0, y: 150 }} // Empieza abajo y oculto
                             animate={{ opacity: 1, y: 0 }} // Se posiciona en su lugar
                             transition={{
