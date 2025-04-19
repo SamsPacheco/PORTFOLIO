@@ -1,24 +1,42 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { motion, useInView } from "motion/react"
 
 export const Experience = () => {
 
-  const [showcase, setshowcase] = useState(false)
+  const [showcase, setshowcase] = useState(false);
+  const ref = useRef(null);
+  const isInview = useInView(ref, {once: true, threshold: 0.25})
+
 
   return (
 
-    <main className='h-max flex flex-col justify-center py-5 mt-16 md:my-32'>
+    <div className='h-max flex flex-col justify-center py-5 mt-16 md:my-32' id="projects">
 
-      <h1 className='text-3xl md:text-[42px] font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center'
+      <motion.h1 className='text-3xl md:text-[42px] font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center'
+         ref={ref}
+         initial={{ opacity: 0}}
+         animate= { isInview && {opacity: 1} }
+         transition={{ duration: .8, ease: "easeInOut"}}
       >
         Portfolio Showcase
         <i className="uil uil-graduation-cap px-3"></i>
-      </h1>
-      <p className='text-[#e1cef7] text-center max-w-[90%] mx-auto py-1 mb-5 mt-2 md:mt-0 text-lg md:text-[20px]'>Explore my journey through projects and technical expertise. Each section represents a milestone in my continuous learning path</p>
+      </motion.h1>
+      <motion.p className='text-[#e1cef7] text-center max-w-[90%] mx-auto py-1 mb-5 mt-2 md:mt-0 text-lg md:text-[20px]'
+         ref={ref}
+         initial={{ opacity: 0}}
+         animate= { isInview && {opacity: 1} }
+         transition={{ duration: .8, ease: "easeInOut"}}
+      >Explore my journey through projects and technical expertise. Each section represents a milestone in my continuous learning path</motion.p>
 
       <section className='space-y-8 my-6'>
 
         {/* bnts */}
-        <div className='md:flex gap-5 h-max space-y-3 md:space-y-0'>
+        <motion.div className='md:flex gap-5 h-max space-y-3 md:space-y-0'
+          ref={ref}
+          initial={{ x: -100, opacity: 0 }}
+          animate={isInview && { x: 0, opacity: 1 }}
+          transition={{ duration: .8, ease: "easeInOut" }}
+        >
           <button
             className={`w-full text-white flex flex-col items-center font-semibold justify-center flex-1 py-2 ${showcase ? 'rounded-md border-[1px] border-[#061a37] bg-[#3f4f70]' : 'bg-[#061a37] hover:bg-[#3f4f70]'}`}
             onClick={() => setshowcase(!showcase)}
@@ -33,7 +51,7 @@ export const Experience = () => {
             <img src="/cubes-stacked.png" alt="stack-icon" className='w-5 py-1' />
             TECHNOLOGIES
           </button>
-        </div>
+        </motion.div>
 
 
         {
@@ -47,8 +65,13 @@ export const Experience = () => {
 
             :
 
-            <div className='py-10 grid [grid-template-columns:repeat(auto-fit,minmax(150px,1fr))] justify-items-center gap-5 lg:w-[80%] lg:mx-auto md:gap-y-7 mx-auto transition-all duration-300 ease-in-out'>
-
+            <motion.div className='py-10 grid [grid-template-columns:repeat(auto-fit,minmax(150px,1fr))] justify-items-center gap-5 lg:w-[80%] lg:mx-auto md:gap-y-7 mx-auto '
+            ref={ref}
+            initial={{ x: 100, opacity: 0 }}
+            animate={isInview && { x: 0, opacity: 1 }}
+            transition={{ duration: .8, ease: "easeInOut" }}
+            >
+              
               <article className='max-w-[140px] h-[150px] rounded-[10px] p-[10px] bg-[#092f63] flex flex-col items-center justify-center text-white font-bold text-[18px]' >
                 <img className=" w-[65%] p-[7px] " src="/icon-technologies/html5.svg" alt="HTML-icon" />
                 <p>HTML</p>
@@ -110,7 +133,7 @@ export const Experience = () => {
                 <p>TailwindCss</p>
               </article>
 
-            </div>
+            </motion.div>
         }
 
         {/* cards -> projects & technologies */}
@@ -123,7 +146,7 @@ export const Experience = () => {
 
       </section>
 
-    </main>
+    </div>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 export const MyFooter = () => {
     return (
-        <section className='text-white text-center mt-20 mb-10'>
+        <section className='text-white text-center my-10 md:mt-20  md:mb-5'>
             {/* <h2 className='text-3xl'>Samuel Pacheco.</h2>
             <div className=" flex gap-5 py-3 my-5">
 

@@ -1,14 +1,19 @@
 import React from 'react'
+import { motion } from "motion/react"
 
 
 export const Home = () => {
     return (
-        <main className='flex flex-col justify-center h-[87dvh] md:h-[88dvh]'>
+        <div className='flex flex-col justify-center h-[87dvh] md:h-[88dvh]' id='home'>
 
             <section className='flex justify-center items-center'>
 
                 {/* text */}
-                <div className='flex-1 space-y-8 py-5 md:py-10 '>
+                <motion.div className='flex-1 space-y-8 py-5 md:py-10'
+                    initial={{y: -100, opacity: 0}}
+                    animate= {{y: 0, opacity: 1}}
+                    transition={{ duration: .8, ease: "easeInOut", delay: .8}} 
+                >
 
                     <div>
                         <p className='text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-center lg:text-start border text-lg'>
@@ -48,39 +53,43 @@ export const Home = () => {
                             Hire Me
                         </button>
 
-                        <button className='text-white w-[80%] mx-auto md:w-60  md:m-0 py-3 bg-black rounded-md flex justify-center items-center gap-3 shadow-btns cursor-pointer'
+                        <a href="https://drive.google.com/file/d/1tUyY5TaDnqwZqN5gWxmWPEfSdq1DB0Pq/view?usp=sharing" target="_blank" rel="noopener noreferrer"  className='text-white w-[80%] mx-auto md:w-60  md:m-0 py-3 bg-black rounded-md flex justify-center items-center gap-3 shadow-btns cursor-pointer'
                         >
                             Download CV
                             <i className="uil uil-import"></i>
-                        </button>
+                        </a>
                     </div>
 
                     {/* networks */}
                     <div className='flex gap-4 justify-center lg:justify-start text-white'>
-                        <div className='w-9 h-9 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
+                        <a href='https://github.com/SamsPacheco' target='_blank' className='w-9 h-9 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
                         >
                             <i className="uil uil-github text-[24px] md:text-3xll"></i>
-                        </div>
+                        </a>
 
-                        <div className='w-9 h-9 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
+                        <a href='https://www.linkedin.com/in/samuel-pacheco-858227246/' target='_blank' className='w-9 h-9 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
                         >
                             <i className="uil uil-linkedin text-[22px] md:text-3xl"></i>
-                        </div>
+                        </a>
 
-                        <div className='w-9 h-9 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
+                        {/* <div className='w-9 h-9 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex justify-center items-center shadow-btns'
                         >
                             <i className="uil uil-envelope text-[24px] md:text-3xl"></i>
-                        </div>
+                        </div> */}
                     </div>
 
-                </div>
+                </motion.div>
 
                 {/* img */}
-                <div className='hidden lg:block mb-20 w-[1000px] '>
+                <motion.div className='hidden lg:block mb-20 w-[1000px] '
+                    initial={{y: -100, opacity: 0}}
+                    animate= {{y: 0, opacity: 1}}
+                    transition={{ duration: .8, ease: "easeInOut", delay: .8}} 
+                >
                     <video src="/Portfolio_Animation.webm" autoPlay muted loop disablePictureInPicture className='w-full' ></video>
-                </div>
+                </motion.div>
 
             </section>
-        </main>
+        </div>
     )
 }

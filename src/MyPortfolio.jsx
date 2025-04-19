@@ -36,7 +36,7 @@ export const MyPortfolio = () => {
 
               <motion.section
                whileInView={{ opacity: 1 }}
-               viewport={{ once: true, amount: .2, rootMain: "50px 0px" }}
+               viewport={{ once: true, amount: 0.4, rootMain: "-150px 0px" }}
                className='py-5'
                >
                 <About />

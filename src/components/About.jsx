@@ -1,26 +1,48 @@
 import React, { useRef } from 'react'
-
+import { motion, useInView } from "motion/react"
 
 export const About = () => {
 
+    const ref = useRef(null);
+    const isInview = useInView(ref, { once: true, threshold: 0.25 });
+
+
     return (
-        <main className='flex flex-col justify-center '>
+        <div className='flex flex-col justify-center' id='about'>
 
-            <h1 className='text-3xl md:text-[42px] font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center '
-            >About
-            </h1>
 
-            <p className='text-[#e1cef7] py-1 flex items-start justify-center text-center text-lg md:text-[20px] md:gap-3'>
-                <i className="uil uil-lightbulb-alt text-xl ml-3"></i>
-                Transforming ideas into digital experiences
-                <i className="uil uil-lightbulb-alt text-xl mr-3"></i>
-            </p>
+            <motion.div
+                ref={ref}
+                initial={{ x: -100, opacity: 0 }}
+                animate={isInview && { x: 0, opacity: 1 }}
+                transition={{ duration: .8, ease: "easeInOut" }}
+            >
+
+                <h1 className='text-3xl md:text-[42px] font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent bg-[length:200%_200%] text-center'
+
+                >About
+                </h1>
+
+                <p className='text-[#e1cef7] py-1 flex items-start justify-center text-center text-lg md:text-[20px] md:gap-3'
+                >
+                    <i className="uil uil-lightbulb-alt text-xl ml-3"></i>
+                    Transforming ideas into digital experiences
+                    <i className="uil uil-lightbulb-alt text-xl mr-3"></i>
+                </p>
+
+            </motion.div>
 
 
             {/* description */}
-            <section className='flex items-center lg:justify-between md:mt-3'>
+            <motion.section className='flex items-center lg:justify-between md:mt-3'
+                ref={ref}
+                initial={{ x: -100, opacity: 0 }}
+                animate={isInview && { x: 0, opacity: 1 }}
+                transition={{ duration: .8, ease: "easeInOut" }}
+            >
 
-                <div className='space-y-5 mt-4  lg:w-[50%] '>
+                <div className='space-y-5 mt-4  lg:w-[50%] overflow-hidden'
+                >
                     <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#ff00cc] via-[#ac84ee] to-[#333399] bg-clip-text text-transparent text-center lg:text-start'
                     >Hello, I'm
                         <span className='block text-white text-[50px] py-2 lg:py-0 md:text-[75px] '>Sam Pacheco.</span>
@@ -31,28 +53,34 @@ export const About = () => {
                     {/* btns  */}
                     <div className='text-white font-semibold md:flex gap-5 mt-4 space-y-4 md:space-y-0 justify-center lg:justify-start'>
 
-                        <button className='w-[85%] mx-auto md:mx-0 md:w-[220px] md:py-3 bg-linear-to-bl from-violet-500 to-fuchsia-500 py-2 rounded-[5px] md:rounded-md flex items-center justify-center gap-3 cursor-pointer'
+                        <a href='#contactMe' className='w-[85%] mx-auto md:mx-0 md:w-[220px] md:py-3 bg-linear-to-bl from-violet-500 to-fuchsia-500 py-2 rounded-[5px] md:rounded-md flex items-center justify-center gap-3 cursor-pointer'
                         >
                             <i className="uil uil-comment-alt-check text-2xl"></i> Contact Me
-                        </button>
+                        </a>
 
-                        <button className='w-[85%] mx-auto md:mx-0 md:w-[220px] py-2 md:py-3 rounded-[5px] md:rounded-md border border-violet-500 text-violet-300 flex items-center justify-center gap-3 cursor-pointer'
+                        <a href="#projects" className='w-[85%] mx-auto md:mx-0 md:w-[220px] py-2 md:py-3 rounded-[5px] md:rounded-md border border-violet-500 text-violet-300 flex items-center justify-center gap-3 cursor-pointer'
                         >
                             <img src="/code-simple.png" alt="code-simple" className='w-5' />View Projects
-                        </button>
+                        </a>
                     </div>
                 </div>
 
                 {/* photo */}
-                <div className='hidden w-[370px] md:w-[500px] md:h-[500px] lg:block egg-effect md:mr-[20px] '
+                <figure className="hidden w-[370px] md:w-[500px] md:h-[500px] lg:block egg-effect md:mr-[20px]"
                 >
-                    <img src="/Me.svg" alt="photo-me"/>
-                </div>
+                    <img src="/Me.svg" alt="photo-me" />
+                </figure>
 
-            </section>
+
+            </motion.section>
 
             {/* projects / certifications / experiences */}
-            <section className='md:flex gap-5 mt-8 space-y-5 '>
+            <motion.section className='md:flex gap-5 mt-8 space-y-5 overflow-hidden'
+                ref={ref}
+                initial={{ y: -100, opacity: 0 }}
+                animate={isInview && { y: 0, opacity: 1 }}
+                transition={{ duration: .8, ease: "easeInOut", delay: .3}}
+             >
                 <article className='flex-1 h-max py-5 bg-[#1e324e] rounded-lg space-y-4'
                 >
                     <div className='flex justify-between px-5'>
@@ -94,9 +122,9 @@ export const About = () => {
                     </div>
                 </article>
 
-            </section>
+            </motion.section>
 
-        </main>
+        </div>
     )
 }
 
